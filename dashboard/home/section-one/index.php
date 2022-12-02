@@ -71,8 +71,8 @@ $username = $_SESSION["username"];
                 <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Section :</h6>
-                        <a class="collapse-item active" href="index.php">1</a>
-                        <a class="collapse-item" href="cards.html">2</a>
+                        <a class="collapse-item active" href="../section-one/index.php">1</a>
+                        <a class="collapse-item" href="../section-two/index.php">2</a>
                     </div>
                 </div>
             </li>
@@ -229,7 +229,7 @@ $username = $_SESSION["username"];
                                                 <td><?php echo $data["title"]; ?></td>
                                                 <td><?php echo $data["desk"]; ?></td>
                                                 <td>
-                                                    <a class="btn btn-danger btn-circle btn-sm" data-toggle="modal" data-target="#hapusModal">
+                                                    <a href="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>?id=<?php echo $data['id']; ?>" class="btn btn-danger btn-circle btn-sm">
                                                         <i class="fas fa-trash"></i>
                                                     </a>
                                                     <a href="update.php?id=<?php echo htmlspecialchars($data['id']); ?>" class="btn btn-success btn-circle btn-sm" role="button">
@@ -237,28 +237,6 @@ $username = $_SESSION["username"];
                                                     </a>
                                                 </td>
                                             </tr>
-
-                                            <div class="modal fade" id="hapusModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                                <div class="modal-dialog" role="document">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title" id="exampleModalLabel">Apakah Kamu ingin Menghapus?</h5>
-                                                            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                                                                <span aria-hidden="true">×</span>
-                                                            </button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                            Tekan "Yes" dibawah ini
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button class="btn btn-secondary" type="button" data-dismiss="modal">
-                                                                No
-                                                            </button>
-                                                            <a class="btn btn-danger" href="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>?id=<?php echo $data['id']; ?>">Yes</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
                                         <?php
                                         }
                                         ?>

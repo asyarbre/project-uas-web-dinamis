@@ -1,0 +1,20 @@
+{
+  "name": "project-web-dinamis",
+  "version": "1.0.0",
+  "description": "Project UAS mata kuliah Website Dinamis",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx tailwindcss -i ./src/input.css -o ./dist/style.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.1.8"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "daisyui": "^2.41.0"
+  }
+}

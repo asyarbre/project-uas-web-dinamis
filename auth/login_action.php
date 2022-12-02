@@ -19,7 +19,7 @@ $jumlah = mysqli_num_rows($hasil);
 		$_SESSION["email"]=$row["email"];
 	
 
-		header("Location:../dashboard/dashboard.php");
+		header("Location:../dashboard/home/section-one/index.php");
 		
 	}else {
 		echo "<script>alert('Username atau password salah');history.go(-1);</script>";

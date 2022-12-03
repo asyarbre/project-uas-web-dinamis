@@ -22,7 +22,7 @@ $username = $_SESSION["username"];
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Tables</title>
+    <title>Dashboard</title>
 
     <!-- Custom fonts for this template -->
     <link href="../../../vendor/fontawesome-free/css/all.css" rel="stylesheet" type="text/css">
@@ -63,24 +63,7 @@ $username = $_SESSION["username"];
             <!-- Heading -->
 
 
-            <li class="nav-item active">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fa-solid fa-house"></i>
-                    <span>Home</span>
-                </a>
-                <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Section :</h6>
-                        <a class="collapse-item active" href="../section-one/index.php">1</a>
-                        <a class="collapse-item" href="../section-two/index.php">2</a>
-                    </div>
-                </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../../../landing-page/home.php" target="_blank">
-                    <i class="fa-solid fa-globe"></i>
-                    <span>Go To Website</span></a>
-            </li>
+            <?php include("../../../components/dash-nav.php")?>
 
 
             <!-- Divider -->

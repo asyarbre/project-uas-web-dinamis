@@ -12,88 +12,7 @@
 </head>
 
 <body>
-  <header>
-    <nav class="relative px-4 py-4 flex justify-between items-center bg-white mx-auto max-w-screen-2xl">
-      <a class="text-3xl font-bold leading-none flex" href="index.html">
-        <img src="../src/img/logo.png" class="mr-3 h-6 md:h-9" alt="Logo" />
-        <span class="self-center text-xl font-semibold whitespace-nowrap text-primary">Tokopedia</span>
-      </a>
-      <div class="lg:hidden">
-        <button class="navbar-burger flex items-center text-gray-700 p-3">
-          <svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-          </svg>
-        </button>
-      </div>
-      <ul class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:items-center lg:w-auto lg:space-x-6">
-        <li class="mb-1">
-          <a class="block p-4 font-semibold text-primary rounded" href="index.html">Beranda</a>
-        </li>
-        <li class="mb-1">
-          <a class="block p-4 font-semibold text-gray-700 hover:text-primary rounded" href="about.html">Tentang Kami</a>
-        </li>
-        <li class="mb-1">
-          <a class="block p-4 font-semibold text-gray-700 hover:text-primary rounded" href="bisnis.html">Bisnis Kami</a>
-        </li>
-        <li class="mb-1">
-          <a class="block p-4 font-semibold text-gray-700 hover:text-primary rounded" href="newsroom.html">Newsroom</a>
-        </li>
-        <li class="mb-1">
-          <a class="block p-4 font-semibold text-gray-700 hover:text-primary rounded" href="gabung.html">Gabung</a>
-        </li>
-        <li class="mb-1">
-          <a class="block p-4 font-semibold text-gray-700 hover:text-primary rounded" href="contact.html">Kontak</a>
-        </li>
-      </ul>
-      <a class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 text-gray-800 border border-primary hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 text-sm font-bold rounded-xl" href="../auth/login.php">Masuk</a>
-      <a class="hidden lg:inline-block py-2 px-6 bg-primary hover:bg-green-600 text-sm text-white font-bold rounded-xl transition duration-200" href="register.html">Daftar</a>
-    </nav>
-    <div class="navbar-menu relative z-50 hidden">
-      <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
-      <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
-        <div class="flex items-center mb-8">
-          <a class="mr-auto text-3xl font-bold leading-none flex" href="index.html">
-            <img src="../src/img/logo.png" class="mr-3 h-6 md:h-9" alt="Logo" />
-            <span class="self-center text-xl font-semibold whitespace-nowrap text-primary">Tokopedia</span>
-          </a>
-          <button class="navbar-close">
-            <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-            </svg>
-          </button>
-        </div>
-        <div>
-          <ul>
-            <li class="mb-1">
-              <a class="block p-4 text-sm font-semibold text-primary rounded" href="index.html">Beranda</a>
-            </li>
-            <li class="mb-1">
-              <a class="block p-4 text-sm font-semibold text-gray-700 hover:text-primary rounded" href="about.html">Tentang Kami</a>
-            </li>
-            <li class="mb-1">
-              <a class="block p-4 text-sm font-semibold text-gray-700 hover:text-primary rounded" href="bisnis.html">Bisnis Kami</a>
-            </li>
-            <li class="mb-1">
-              <a class="block p-4 text-sm font-semibold text-gray-700 hover:text-primary rounded" href="newsroom.html">Newsroom</a>
-            </li>
-            <li class="mb-1">
-              <a class="block p-4 text-sm font-semibold text-gray-700 hover:text-primary rounded" href="gabung.html">Gabung</a>
-            </li>
-            <li class="mb-1">
-              <a class="block p-4 text-sm font-semibold text-gray-700 hover:text-primary rounded" href="contact.html">Kontak</a>
-            </li>
-          </ul>
-        </div>
-        <div class="mt-auto">
-          <div class="pt-6">
-            <a class="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold text-gray-800 border border-primary hover:bg-gray-50 focus:ring-4 focus:ring-gray-300rounded-xl" href="../auth/login.php">Login</a>
-
-            <a class="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-primary hover:bg-green-500 rounded-xl" href="register.html">Daftar</a>
-          </div>
-        </div>
-      </nav>
-    </div>
-  </header>
+  <?php include("../components/landing-nav.php");?>
   <section class="bg-gray-50 py-20">
     <div class="container mx-auto w-full px-6 text-center sm:max-w-6xl">
       <h3 class="text-xl font-semibold text-gray-800 md:text-3xl">
@@ -114,7 +33,7 @@
               <?php echo $data['title']; ?>
             </p>
             <p class="text-gray-600 text-xs md:text-sm lg:text-base mt-2">
-            <?php echo $data['desk']; ?>
+              <?php echo $data['desk']; ?>
             </p>
           </div>
         <?php
@@ -128,59 +47,28 @@
     <h2 class="mt-3 text-2xl font-semibold text-gray-800 text-center lg:text-4xl lg:w-full">
       Dampak Tokopedia Terhadap Perekonomian Indonesia
     </h2>
-    <div class="container py-14 px-5 mx-auto max-w-lg sm:px-6 sm:max-w-2xl lg:flex lg:flex-wrap lg:max-w-7xl" data-aos="fade-up">
-      <div class="w-full p-5 rounded-lg border shadow-md my-5 sm:flex lg:block lg:w-[600px] lg:mx-auto">
-        <img src="../src/img/dampak-1.png" alt="icon-1" class="w-24 sm:w-32" />
-        <div class="ml-3">
-          <h2 class="text-2xl text-primary font-semibold mt-3 sm:text-3xl">
-            Memberdayakan 90% penjual berskala mikro
-          </h2>
-          <p class="text-gray-600 text-base mt-3 sm:text-base">
-            Saat pandemi, Tokopedia mendorong para pelaku UMKM untuk dapat
-            bertahan, bangkit, dan mengembangkan bisnisnya melalui adopsi
-            digital.
-          </p>
+    <div class="container py-14 px-5 mx-auto max-w-lg sm:px-6 sm:max-w-2xl lg:flex lg:flex-wrap lg:max-w-7xl">
+      <?php
+      include '../koneksi.php';
+      $result = mysqli_query($kon, "select * from home_sec_two");
+      while ($data = mysqli_fetch_array($result)) {
+      ?>
+        <div class="w-full p-5 rounded-lg border shadow-md my-5 sm:flex lg:block lg:w-[600px] lg:mx-auto" data-aos="flip-up">
+          <img src="../src/img/<?php echo $data['gambar']?>" alt="icon-1" class="w-24 sm:w-32" />
+          <div class="ml-3">
+            <h2 class="text-2xl text-primary font-semibold mt-3 sm:text-3xl">
+              <?php echo $data['title']; ?>
+            </h2>
+            <p class="text-gray-600 text-base mt-3 sm:text-base">
+              <?php echo $data['desk']; ?>
+            </p>
+          </div>
         </div>
-      </div>
-      <div class="w-full p-5 rounded-lg border shadow-md my-5 sm:flex lg:block lg:w-[600px] lg:mx-auto">
-        <img src="../src/img/dampak-2.png" alt="icon-3" class="w-24 sm:w-32" />
-        <div class="ml-3">
-          <h2 class="text-2xl text-primary font-semibold mt-3 sm:text-3xl">
-            Jumlah penjualan meningkat 133%
-          </h2>
-          <p class="text-gray-600 text-base mt-3 sm:text-base">
-            7 dari 10 pelaku usaha mengalami lonjakan volume penjualan seiring
-            dengan beralihnya pergeseran penjualan secara daring melalui kanal
-            Tokopedia.
-          </p>
-        </div>
-      </div>
-      <div class="w-full p-5 rounded-lg overflow-hidden border shadow-md my-5 sm:flex lg:block lg:w-[600px] lg:mx-auto">
-        <img src="../src/img/dampak-3.png" alt="icon-3" class="w-24 sm:w-32" />
-        <div class="ml-3">
-          <h2 class="text-2xl text-primary font-semibold mt-3 sm:text-3xl">
-            76,4% penjual merasakan kemudahan mengelola bisnis di Tokopedia
-          </h2>
-          <p class="text-gray-600 text-base mt-3 sm:text-base">
-            Kemudahan dalam mengelola bisnis merupakan alasan utama bagi
-            sebagian besar penjual yang bergabung bersama Tokopedia.
-          </p>
-        </div>
-      </div>
-      <div class="w-full p-5 rounded-lg overflow-hidden border shadow-md my-5 sm:flex lg:block lg:w-[600px] lg:mx-auto">
-        <img src="../src/img/dampak-4.png" alt="icon-4" class="w-24 sm:w-32" />
-        <div class="ml-3">
-          <h2 class="text-2xl text-primary font-semibold mt-3 sm:text-3xl">
-            Mendorong inklusi keuangan di Indonesia
-          </h2>
-          <p class="text-gray-600 text-base mt-3 sm:text-base">
-            Tokopedia turut mendorong adopsi metode pembayaran digital.
-            E-wallet dan mobile/internet banking adalah dua produk keuangan
-            yang paling banyak dipilih selama pandemi.
-          </p>
-        </div>
-      </div>
-      <a href="#" class="inline-block mt-14 px-5 py-3 w-full text-center bg-primary text-white font-bold rounded-lg hover:shadow-lg hover:scale-105 lg:w-1/3 lg:mx-auto ease-out duration-300">Lihat Selengkapnya</a>
+      <?php
+      }
+      ?>
+
+      <a href="#" class="inline-block mt-14 px-5 py-3 w-full text-center bg-primary text-white font-bold rounded-lg hover:shadow-lg hover:scale-105 lg:w-1/3 lg:mx-auto ease-out duration-300" data-aos="zoom-in-up">Lihat Selengkapnya</a>
     </div>
   </section>
   <section class="bg-gray-50 py-20">
@@ -227,68 +115,7 @@
       <img data-aos="fade-left" src="../src/img/goto.png" alt="img-goto" class="rounded-xl shadow-lg md:w-1/2 md:h-1/2 md:ml-8 xl:max-w-lg" />
     </div>
   </section>
-  <footer>
-    <div class="max-w-xl flex p-4 mx-auto justify-between lg:max-w-7xl md:py-10">
-      <div class="m-3 font-medium md:m-5">
-        <ul>
-          <li class="my-2 text-gray-600 hover:text-primary text-md sm:text-lg">
-            <a href="index.html">Beranda</a>
-          </li>
-          <li class="my-2 text-gray-600 hover:text-primary text-md sm:text-lg">
-            <a href="about.html">Tentang kami</a>
-          </li>
-          <li class="my-2 text-gray-600 hover:text-primary text-md sm:text-lg">
-            <a href="bisnis.html">Bisnis Kami</a>
-          </li>
-          <li class="my-2 text-gray-600 hover:text-primary text-md sm:text-lg">
-            <a href="newsroom.html">Newsroom</a>
-          </li>
-          <li class="my-2 text-gray-600 hover:text-primary text-md sm:text-lg">
-            <a href="gabung.html">Gabung</a>
-          </li>
-          <li class="my-2 text-gray-600 hover:text-primary text-md sm:text-lg">
-            <a href="contact.html">Kontak</a>
-          </li>
-        </ul>
-      </div>
-      <div class="m-3 my-auto hidden lg:block">
-        <p class="text-gray-600 font-medium">Keamanan Privasi</p>
-        <div class="flex flex-wrap mt-4 space-x-2">
-          <a href="https://seal.controlcase.com/index.php?page=showCert&cId=3968489199" target="_blank"><img src="../src/img/keamanan-privasi-1.png" alt="security-1" class="w-24" /></a>
-          <a href="https://www.bsigroup.com/en-GB/validate-bsi-issued-certificates/client-directory-profile/PT_TOK-0047786234-000" target="_blank"><img src="../src/img/keamanan-privasi-2.png" alt="security-1" class="w-24" /></a>
-          <a href="https://www.bsigroup.com/en-GB/validate-bsi-issued-certificates/client-directory-profile/PT_TOK-0047786234-000" target="_blank"><img src="../src/img/keamanan-privasi-2.png" alt="security-1" class="w-24" /></a>
-        </div>
-      </div>
-      <div class="m-3 my-auto">
-        <p class="text-gray-600 font-semibold text-lg">
-          Unduh Aplikasi Tokopedia
-        </p>
-        <div class="flex flex-wrap space-x-2 mt-2">
-          <a href="https://play.google.com/store/apps/details?id=com.tokopedia.tkpd&hl=en" target="_blank"><img src="../src/img/playstore.png" alt="playstore" class="w-20 md:w-28" /></a>
-          <a href="https://apps.apple.com/us/app/tokopedia-jual-beli-online/id1001394201" target="_blank"><img src="../src/img/appstore.png" alt="appstore" class="w-20 md:w-28" /></a>
-        </div>
-      </div>
-    </div>
-    <div class="mx-auto max-w-7xl mt-8 border-t border-gray-200 py-2 px-4 md:py-5 flex flex-col items-center md:flex-row md:justify-between">
-      <ul class="flex space-x-6">
-        <a href="https://www.facebook.com/tokopedia" target="_blank">
-          <img src="../src/img/facebook.svg" class="w-6" alt="facebook" />
-        </a>
-        <a href="https://www.linkedin.com/company/pt--tokopedia" target="_blank">
-          <img src="../src/img/linkedin.png" class="w-6" alt="linkedin" />
-        </a>
-        <a href="https://instagram.com/tokopedia" target="_blank">
-          <img src="../src/img/instagram.svg" class="w-6" alt="instagram" />
-        </a>
-        <a href="https://www.youtube.com/user/tokopedia" target="_blank">
-          <img src="../src/img/youtube.svg" class="w-6" alt="youtube" />
-        </a>
-      </ul>
-      <p class="mt-4 text-base text-gray-500 md:mt-0">
-        &copy; 2009 - 2022 PT Tokopedia
-      </p>
-    </div>
-  </footer>
+  <?php include("../components/footer.php");?>
 
   <script src="../script.js"></script>
   <script src="../vendor/aos/aos.js"></script>

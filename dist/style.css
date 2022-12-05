@@ -1070,6 +1070,20 @@ html {
   align-items: center;
 }
 
+.navbar-start {
+  width: 50%;
+  justify-content: flex-start;
+}
+
+.navbar-center {
+  flex-shrink: 0;
+}
+
+.navbar-end {
+  width: 50%;
+  justify-content: flex-end;
+}
+
 .table {
   position: relative;
   text-align: left;
@@ -1112,6 +1126,20 @@ html {
   border-width: 4px;
   --tw-border-opacity: 1;
   border-color: hsl(var(--b1) / var(--tw-border-opacity));
+}
+
+.badge-primary {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--p) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--p) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--pc) / var(--tw-text-opacity));
+}
+
+.badge-outline.badge-primary {
+  --tw-text-opacity: 1;
+  color: hsl(var(--p) / var(--tw-text-opacity));
 }
 
 .btn-outline .badge {
@@ -1848,6 +1876,14 @@ html {
   border-radius: var(--rounded-box, 1rem);
 }
 
+.badge-xs {
+  height: 0.75rem;
+  font-size: 0.75rem;
+  line-height: .75rem;
+  padding-left: 0.313rem;
+  padding-right: 0.313rem;
+}
+
 .badge-sm {
   height: 1rem;
   font-size: 0.75rem;
@@ -2239,8 +2275,8 @@ html {
   margin-top: 0.25rem;
 }
 
-.mt-20 {
-  margin-top: 5rem;
+.mb-5 {
+  margin-bottom: 1.25rem;
 }
 
 .block {
@@ -2696,6 +2732,10 @@ html {
   text-align: center;
 }
 
+.indent-20 {
+  text-indent: 5rem;
+}
+
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -3032,6 +3072,10 @@ html {
 }
 
 @media (min-width: 768px) {
+  .md\:order-2 {
+    order: 2;
+  }
+
   .md\:m-5 {
     margin: 1.25rem;
   }
@@ -3040,12 +3084,12 @@ html {
     margin-top: 0px;
   }
 
-  .md\:ml-8 {
-    margin-left: 2rem;
-  }
-
   .md\:mr-8 {
     margin-right: 2rem;
+  }
+
+  .md\:ml-8 {
+    margin-left: 2rem;
   }
 
   .md\:mr-5 {

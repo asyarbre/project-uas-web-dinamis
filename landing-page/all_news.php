@@ -42,36 +42,26 @@
     </div>
   </div>
   <?php
-  include "../koneksi.php";
-  function input($data)
-  {
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
-  }
-  //Cek apakah ada nilai yang dikirim menggunakan methos GET dengan nama id
-  if (isset($_GET['id'])) {
-    $id = input($_GET["id"]);
-
-    $sql = "select * from newsroom where id=$id";
-    $hasil = mysqli_query($kon, $sql);
-    $data = mysqli_fetch_assoc($hasil);
+  include '../koneksi.php';
+  $result = mysqli_query($kon, "select * from newsroom");
+  while ($data = mysqli_fetch_array($result)) {
+  ?>
+    <section class="bg-gray-50 py-20">
+      <div class="container mx-auto w-full px-6 sm:max-w-6xl">
+        <h1 class="text-gray-800 font-bold mx-auto lg:text-3xl mb-5"><?php echo $data['title']; ?></h1>
+        <p class="text-gray-500 md:text-lg mb-5"><?= date('d F Y', strtotime($data['tanggal'])); ?></p>
+        <p class="text-gray-500 mb-5">Author : <span class="font-medium"><?php echo $data['author']; ?></span></p>
+        <img src="../src/img/<?php echo $data['gambar']; ?>" alt="" class="rounded-xl shadow-lg md:max-w-3xl" />
+        <div class="mt-8 text-gray-500 indent-20 md:text-lg">
+          <p>
+            <?php echo nl2br($data['isi']); ?>
+          </p>
+        </div>
+      </div>
+    </section>
+  <?php
   }
   ?>
-  <section class="bg-gray-50 py-20">
-    <div class="container mx-auto w-full px-6 sm:max-w-6xl">
-      <h1 class="text-gray-800 font-bold mx-auto lg:text-3xl mb-5"><?php echo $data['title']; ?></h1>
-      <p class="text-gray-500 md:text-lg mb-5"><?= date('d F Y', strtotime($data['tanggal'])); ?></p>
-      <p class="text-gray-500 mb-5">Author : <span class="font-medium"><?php echo $data['author']; ?></span></p>
-      <img src="../src/img/<?php echo $data['gambar']; ?>" alt="" class="rounded-xl shadow-lg md:max-w-3xl" />
-      <div class="mt-8 text-gray-500 indent-20 md:text-lg">
-        <p>
-          <?php echo nl2br($data['isi']); ?>
-        </p>
-      </div>
-    </div>
-  </section>
 </body>
 
 </html>

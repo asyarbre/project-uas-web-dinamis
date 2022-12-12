@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  <?php include("../components/landing-nav.php");?>
+  <?php include("../components/landing-nav.php"); ?>
   <section class="bg-gray-50 py-20">
     <div class="container mx-auto w-full px-6 text-center sm:max-w-6xl">
       <h3 class="text-xl font-semibold text-gray-800 md:text-3xl">
@@ -54,7 +54,7 @@
       while ($data = mysqli_fetch_array($result)) {
       ?>
         <div class="w-full p-5 rounded-lg border shadow-md my-5 sm:flex lg:block lg:w-[600px] lg:mx-auto" data-aos="flip-up">
-          <img src="../src/img/<?php echo $data['gambar']?>" alt="icon-1" class="w-24 sm:w-32" />
+          <img src="../src/img/<?php echo $data['gambar'] ?>" alt="icon-1" class="w-24 sm:w-32" />
           <div class="ml-3">
             <h2 class="text-2xl text-primary font-semibold mt-3 sm:text-3xl">
               <?php echo $data['title']; ?>
@@ -67,14 +67,12 @@
       <?php
       }
       ?>
-
-      <a href="#" class="inline-block mt-14 px-5 py-3 w-full text-center bg-primary text-white font-bold rounded-lg hover:shadow-lg hover:scale-105 lg:w-1/3 lg:mx-auto ease-out duration-300" data-aos="zoom-in-up">Lihat Selengkapnya</a>
     </div>
   </section>
   <section class="bg-gray-50 py-20">
     <div class="container mx-auto max-w-xl md:max-w-2xl lg:max-w-full xl:max-w-7xl px-6 lg:p-0 md:flex">
-      <img data-aos="fade-right" src="../src/img/kisah.jpg" alt="kisah" class="rounded-lg shadow-lg md:w-1/2 md:h-1/2 md:mr-5 xl:mx-5" />
-      <div class="mt-5 lg:mx-10" data-aos="fade-left">
+      <img data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-sine" src="../src/img/kisah.jpg" alt="kisah" class="rounded-lg shadow-lg md:w-1/2 md:h-1/2 md:mr-5 xl:mx-5" />
+      <div class="mt-5 lg:mx-10" data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease-in-sine">
         <hr class="bg-primary h-0.5 w-16" />
         <h4 class="text-gray-500 uppercase mt-3 lg: tracking-wider">
           Kisah Kami
@@ -102,7 +100,7 @@
   </section>
   <section class="bg-gray-50 py-20">
     <div class="container mx-auto max-w-xl px-6 md:flex md:max-w-2xl lg:max-w-4xl lg:px-0 xl:max-w-6xl">
-      <div class="mt-5 lg:self-center" data-aos="fade-right">
+      <div class="mt-5 lg:self-center" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-sine">
         <hr class="bg-primary h-1 w-16" />
         <h2 class="mt-5 text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800">
           Perjalanan Baru Dalam Mendorong Perubahan Bersama GoTo
@@ -112,10 +110,10 @@
           anak bangsa, untuk bersatu dalam menciptakan ekosistem menyeluruh.
         </p>
       </div>
-      <img data-aos="fade-left" src="../src/img/goto.png" alt="img-goto" class="rounded-xl shadow-lg md:w-1/2 md:h-1/2 md:ml-8 xl:max-w-lg" />
+      <img data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease-in-sine" src="../src/img/goto.png" alt="img-goto" class="rounded-xl shadow-lg md:w-1/2 md:h-1/2 md:ml-8 xl:max-w-lg" />
     </div>
   </section>
-  <?php include("../components/footer.php");?>
+  <?php include("../components/footer.php"); ?>
 
   <script src="../script.js"></script>
   <script src="../vendor/aos/aos.js"></script>

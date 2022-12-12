@@ -13,7 +13,7 @@
 
 <body>
   <?php include("../components/landing-nav.php"); ?>
-  <div data-aos="fade-down" data-aos-duration="1000">
+  <div data-aos="fade-down" data-aos-duration="1000" class="py-20">
     <hr class="bg-primary h-1 w-10 mx-auto mt-20" />
     <h1 class="mt-3 text-4xl font-semibold text-gray-800 text-center md:text-5xl lg:w-full">
       Newsroom
@@ -51,7 +51,7 @@
   </div>
 
   <div class="flex justify-center">
-    <a href="#" class="px-5 py-3 mx-auto text-center text-sm bg-primary text-white font-bold rounded-lg hover:shadow-lg hover:scale-105 lg:w-1/3 lg:mx-auto ease-out duration-300" target="_blank">Klik di sini untuk melihat seluruh Siaran Pers</a>
+    <a href="all_news.php" class="px-5 py-3 mx-auto text-center text-sm bg-primary text-white font-bold rounded-lg hover:shadow-lg hover:scale-105 lg:w-1/3 lg:mx-auto ease-out duration-300" target="_blank">Klik di sini untuk melihat seluruh Siaran Pers</a>
   </div>
   <?php include("../components/footer.php"); ?>
 

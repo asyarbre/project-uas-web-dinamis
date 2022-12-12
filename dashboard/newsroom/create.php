@@ -155,6 +155,7 @@ $username = $_SESSION["username"];
 
           $title = input($_POST["title"]);
           $isi = input($_POST["isi"]);
+          $author = $username;
           $gambar = input($_POST["gambar"]);
 
           $ekstensi_diperbolehkan  = array('png', 'jpg');
@@ -168,7 +169,7 @@ $username = $_SESSION["username"];
 
 
           //Query input menginput data kedalam tabel
-          $sql = "insert into newsroom (title,isi,gambar) values ('$title','$isi','$gambar')";
+          $sql = "insert into newsroom (title,isi,author,gambar) values ('$title','$isi','$author','$gambar')";
 
           // $sql = "insert into tb_discover (title,author) values ('$title','$author')";
 
@@ -195,6 +196,10 @@ $username = $_SESSION["username"];
             <div class="form-group">
               <label>Isi Berita:</label>
               <textarea class="form-control" name="isi" placeholder="Masukan Isi Berita" rows="5" required></textarea>
+            </div>
+            <div class="form-group">
+              <label>Author:</label>
+              <input type="text" name="author" class="form-control" value="<?php echo $username?>" placeholder="Masukan Title" readonly />
             </div>
             <div class="form-group">
               <label>Upload Gambar</label>

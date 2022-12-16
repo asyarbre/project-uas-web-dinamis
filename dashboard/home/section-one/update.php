@@ -44,7 +44,7 @@ $username = $_SESSION["username"];
     <!-- Sidebar -->
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="1.php">
         <div class="sidebar-brand-icon">
           <i class="fas fa-laptop"></i>
 
@@ -176,7 +176,7 @@ $username = $_SESSION["username"];
 
           //Kondisi apakah berhasil atau tidak dalam mengeksekusi query diatas
           if ($hasil) {
-            echo "<script> alert('Data Berhasil Disimpan'); window.location.href='index.php';</script>";
+            echo "<script> alert('Data Berhasil Diupdate'); window.location.href='1.php';</script>";
           } else {
             echo "<div class='alert alert-danger'> Data Gagal disimpan.</div>";
           }

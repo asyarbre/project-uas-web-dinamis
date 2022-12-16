@@ -168,7 +168,7 @@ $username = $_SESSION["username"];
 
                             //Kondisi apakah berhasil atau tidak
                             if ($hasil) {
-                                echo "<script>alert('Data berhasil dihapus.');window.location='index.php';</script>";
+                                echo "<script>alert('Data berhasil dihapus.');window.location='1.php';</script>";
                             } else {
                                 echo "<div class='alert alert-danger'> Data Gagal dihapus.</div>";
                             }

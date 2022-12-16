@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 12, 2022 at 08:33 AM
+-- Generation Time: Dec 16, 2022 at 07:35 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -142,6 +142,51 @@ INSERT INTO `home_sec_two` (`id`, `title`, `desk`, `gambar`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `kontak`
+--
+
+CREATE TABLE `kontak` (
+  `id` int(11) NOT NULL,
+  `title` varchar(200) NOT NULL,
+  `desk` varchar(200) NOT NULL,
+  `contact_to` varchar(200) NOT NULL,
+  `link` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `kontak`
+--
+
+INSERT INTO `kontak` (`id`, `title`, `desk`, `contact_to`, `link`) VALUES
+(1, 'Pertanyaan Pers', 'Untuk keperluan pers dan media, kunjungi', 'Ruang berita', 'mailto:pr@tokopedia.com'),
+(2, 'Permintaan Pembicara', 'Permintaan pembicara untuk mengisi acara Anda. Mohon sertakan proposal serta detail acara dan kirim melalui email ke', 'speakers@tokopedia.com', 'mailto:speakers@tokopedia.com'),
+(3, 'Tokopedia Care', 'Jika Anda memiliki pertanyaan seputar transaksi atau membutuhkan bantuan lainnya, kunjungi', 'Tokopedia Care', 'https://www.tokopedia.com/help'),
+(4, 'Karir', 'Ingin ikut andil dalam pemerataan ekonomi secara digital? Kunjungi situs', 'Karir Kami', 'https://www.tokopedia.com/careers/');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `lokasi`
+--
+
+CREATE TABLE `lokasi` (
+  `id` int(11) NOT NULL,
+  `nama` varchar(200) NOT NULL,
+  `alamat` varchar(500) NOT NULL,
+  `preview_map` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `lokasi`
+--
+
+INSERT INTO `lokasi` (`id`, `nama`, `alamat`, `preview_map`) VALUES
+(1, 'Tokopedia Care', 'TOKOPEDIA CARE TOWER - Ground Floor Ciputra International, Jl. Lkr. Luar Barat No.101, RT.13, Rw. Buaya, Kecamatan Cengkareng, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11740', 'maps-1.jpg'),
+(2, 'Tokopedia Tower', 'Tokopedia Tower Ciputra World 2, Jl. Prof. DR. Satrio No.Kav. 11, RT.3/RW.3, Karet Semanggi, Setia Budi, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12950', 'maps-2.jpg');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `newsroom`
 --
 
@@ -164,7 +209,7 @@ INSERT INTO `newsroom` (`id`, `title`, `isi`, `author`, `gambar`, `tanggal`) VAL
 (4, 'Tokopedia Bagi 5 Tips Make Up Natural dan Profesional ke Kantor', 'Bekerja dari kantor atau work from office (WFO) kembali menjadi rutinitas sebagian besar masyarakat. Tokopedia melalui Category Development (Beauty and Personal Care) Senior Lead Tokopedia, Sherine Pranata, pun membagikan lima tips make up natural nan profesional untuk WFO.\r\n\r\n1. Jaga Kelembapan Wajah dengan Moisturizer - Sherine mengungkapkan, “Krim pelembab atau moisturizer menjadi salah satu produk yang paling laris di kampanye Tokopedia Beauty Dealight 2022.” Selain menjaga kelembapan serta elastisitas kulit, moisturizer juga dapat menjadi pelindung kulit wajah sebelum pengaplikasian make up.\r\n\r\n2. Gunakan Make Up yang Transferproof - “Hindari memakai foundation tebal, gunakan bedak agar riasan awet, pilih lip tint yang tidak mudah melekat di masker,” saran Beauty Influencer, Kiara Leswara \r\n\r\n3. Pilih Bedak Berdasarkan Jenis Kulit - Pemilihan bedak harus disesuaikan dengan jenis kulit. Pengaplikasian bedak yang sesuai dengan jenis kulit dapat membuat make up menjadi lebih tahan lama. “Pakai primer dan foundation dengan hasil akhir dewy bagi kulit kering, sedangkan untuk kulit kombinasi atau berminyak, gunakan produk dengan hasil akhir matte,” \r\n\r\n4. Andalkan Eyeliner dan Eyeshadow - Karena pemakaian masker menutupi sebagian besar wajah, jangan lupa untuk menggunakan eyeliner serta eyeshadow. “Agar terlihat lebih natural, pilih eyeliner warna cokelat. Untuk eyeshadow, sebaiknya pakai warna netral, seperti cokelat tua atau taupe, agar tetap memberikan aksen profesional pada mata,” \r\n\r\n5. Jangan Lupa Setting Spray - Setting spray dapat membantu riasan tidak mudah luntur dan memudar, terutama ketika melakukan berbagai kegiatan di kantor.', 'asyari', 'news-3.jpg', '2022-12-04'),
 (5, 'Tokopedia bersama Unilever Indonesia Dukung Pemberdayaan UMKM Perempuan Jawa Barat', 'Dalam semangat kolaborasi dengan para mitra strategis demi memberikan panggung seluas-luasnya bagi pegiat usaha di Indonesia, khususnya UMKM lokal, Tokopedia bersama Unilever Indonesia dan Pemerintah Provinsi Jawa Barat mengadakan Kelas Perempuan Maju Digital bertajuk “UMKM Perempuan Berdaya dan Maju Digital: Inspirasi Perempuan Berani Membawa Perubahan” yang dihadiri ratusan UMKM lokal wilayah Jawa Barat dan sekitarnya.\r\n\r\nAcara ini merupakan kelanjutan dari penandatangan kerja sama Tokopedia dan Unilever Indonesia dalam rangkaian program B20 Indonesia Women in Business Action Council yang didedikasikan untuk memberdayakan pengusaha perempuan. Hadir sebagai hasil dari presidensi B20 Indonesia, program ini juga menghadirkan inisiatif One Global Women Empowerment (OGWE) platform yang berfokus pada perluasan akses informasi, pendampingan bisnis di era digital, dan pelatihan teknis kewirausahaan sebagai bekal untuk menghadapi tantangan ke depan.\r\n\r\nKepala Divisi Kebijakan Publik dan Pemerintah Daerah Tokopedia, Emmiryzan mengatakan, “Ini merupakan keempat kalinya Tokopedia mengadakan KPMD setelah sukses diselenggarakan di Bali dan Surabaya. Kami berharap lewat KPMD, Tokopedia dapat turut membantu meningkatkan daya saing pelaku UMKM lokal, khususnya UMKM perempuan agar mampu menjadi tuan rumah di negeri sendiri serta semakin menjadi pilihan utama masyarakat Indonesia.”\r\n\r\nKetua Umum Sekoper Cinta, Atalia Praratya mengungkapkan, “Kami menyambut baik kolaborasi Tokopedia dan Unilever Indonesia dalam menghadirkan kegiatan KPMD di wilayah Jawa Barat. Hal ini pun sejalan dengan salah satu program kami di Sekoper Cinta yang memberikan pelatihan dalam membuka peluang usaha sehingga perempuan bisa mandiri dan berkontribusi pada perekonomian keluarga. Kami harap melalui kegiatan ini semakin banyak UMKM dari Jawa Barat yang berkualitas.”\r\n\r\n“Sejalan dengan strategi ‘The Unilever Compass’, Unilever berkomitmen untuk terus berkontribusi dalam menciptakan masyarakat yang lebih adil dan inklusif yang diwujudkan melalui upaya kami dalam mengembangkan keterampilan kewirausahaan dan menyediakan akses ke mentoring serta pendampingan bagi perempuan dan UMKM. Melalui kolaborasi dengan Tokopedia, kami berharap UMKM perempuan, khususnya di Jawa Barat, dapat terus bertumbuh dan berdaya saing,” terang Equity, Diversity and Inclusion Lead Unilever Indonesia Foundation, Marini Fabiano.', 'asyari', 'news-4.jpg', '2022-12-04'),
 (6, 'Hari Pahlawan, Inisiatif Hyperlocal Tokopedia Dukung UMKM Lokal Jadi Pahlawan Ekonomi Digital', 'Menyambut Hari Pahlawan 10 November 2022, Tokopedia melalui inisiatif Hyperlocal berupaya membantu sekitar 12 juta pegiat usaha di Indonesia, yang hampir 100%nya UMKM lokal, menjadi pahlawan ekonomi.\r\n\r\nHyperlocal merupakan inisiatif Tokopedia untuk mendekatkan penjual dengan pembeli di mana pun mereka berada, agar UMKM di seluruh penjuru Indonesia punya kesempatan yang sama untuk bertumbuh dan berkembang (tanpa harus pindah ke kota besar), dan pembeli bisa mendapatkan produk kebutuhan yang lebih beragam dengan lebih cepat dan efisien.\r\n\r\n“Inisiatif Hyperlocal memiliki berbagai contoh manifestasi, seperti layanan pemenuhan pesanan (fulfillment) Dilayani Tokopedia, Kumpulan Toko Pilihan (KTP), kampanye PASTI (Paket Sehari Tiba) dan masih banyak lagi yang dapat dimanfaatkan oleh para pegiat lokal,” kata Kepala Divisi Hubungan Masyarakat (Regional) Tokopedia, Rizky Juanita Azuz.\r\n\r\nInisiatif Hyperlocal Tokopedia juga telah mendukung tumbuh kembang UMKM lokal. Terbukti dari jumlah penjual yang memanfaatkan layanan Dilayani Tokopedia naik lebih dari 1,5x lipat selama kuartal III 2022 dibanding kuartal III 2021. Peningkatan ini juga mendorong jumlah pembeli yang bertransaksi dengan penjual yang menggunakan layanan Dilayani Tokopedia naik lebih dari 2x lipat.\r\n\r\n“Selain di Dilayani Tokopedia, kami juga melihat jumlah transaksi dan penjual yang mengikuti kampanye PASTI dan KTP masing-masing melonjak lebih dari 1,5x lipat,” ungkap Head of Regional Growth Expansion (RGX) Central Tokopedia, Nafisah Wulandari.\r\n\r\n“Di sisi lain, kecamatan dengan pertumbuhan transaksi tertinggi melalui Tokopedia selama kuartal III 2022 dibanding kuartal III 2021, antara lain Kutowinangun di Jawa Tengah, Eremerasa, Sanrobone, Arungkeke di Sulawesi Selatan dan Indrapuri di D.I Aceh,” tambah Nafisah.', 'asyari', 'news-5.jpg', '2022-12-04'),
-(7, 'Inilah Produk Kebutuhan Anak Paling Laris di Tokopedia Selama Kuartal III 2022', 'Tokopedia mencatat kategori Ibu dan Anak masih menjadi salah satu kategori yang paling laris di Tokopedia pada 2022. &quot;Transaksi pada kategori ini terus meningkat. Bahkan pada Semester I 2022, tercatat jumlah transaksi sub kategori Ibu dan Anak naik lebih dari 1,5x lipat dibandingkan dengan periode yang sama di 2021,” terang Head of Category Development Tokopedia, Ramadhan Niendraputra.\r\n\r\nIa menambahkan, “Di kuartal III 2022, produk seperti Makanan &amp; Susu Bayi, Popok, Perlengkapan Mandi Bayi Perawatan Bayi, dan Perlengkapan Makan Bayi merupakan beberapa produk yang paling banyak diburu pada sub kategori Ibu dan Anak. Sementara di sub kategori Fesyen Anak, Tas Ransel Anak, Kaos Anak Laki-Laki, Sneakers Anak Laki-Laki, Setelan Anak Laki-Laki, dan Dress Anak Perempuan menjadi yang paling laris di kuartal III ini.”\r\n\r\nJumlah pembeli untuk kategori ini pun semakin meningkat. Tokopedia mencatat ada kenaikan sekitar 1,5x lipat pada Semester I 2022 dibandingkan dengan Semester I 2021. Di sisi lain, Kota Medan, Palembang, Bandung, Semarang, Surabaya, dan Kabupaten Sidoarjo menjadi Kota/Kabupaten dengan transaksi tertinggi di kategori Ibu dan Anak Tokopedia.\r\n\r\nTren ini turut didorong oleh sederet inisiatif dari Tokopedia untuk memenuhi kebutuhan orang tua akan produk yang berkaitan dengan anak. Seperti Tokopedia Parents, sebuah ekosistem khusus di Tokopedia untuk mempermudah masyarakat, terutama komunitas orang tua, mendapatkan produk kebutuhan serta informasi relevan berkaitan dengan anak, keluarga dan rumah tangga.\r\n\r\n“Data internal kami mencatat bahwa jumlah penjual yang ikut dalam Tokopedia Parents pun naik lebih dari 3x lipat pada kuartal III 2022 dibandingkan kuartal III 2021,” terang Ramadhan.\r\n\r\nBerangkat dari kesulitannya dalam mencari pakaian bayi yang nyaman dan multifungsi dengan harga terjangkau, Febrina Oktaviani, akhirnya mendirikan Kalale. “Setiap produk yang kami buat, tidak hanya nyaman dan praktis bagi anak, tapi juga memiliki cerita sendiri. Inilah yang membedakan produk kami dengan yang lainnya,” jelasnya.', 'asyari', 'news-6.jpg', '2022-12-04');
+(7, 'Inilah Produk Kebutuhan Anak Paling Laris di Tokopedia Selama Kuartal III 2022', 'Tokopedia mencatat kategori Ibu dan Anak masih menjadi salah satu kategori yang paling laris di Tokopedia pada 2022. &quot;Transaksi pada kategori ini terus meningkat. Bahkan pada Semester I 2022, tercatat jumlah transaksi sub kategori Ibu dan Anak naik lebih dari 1,5x lipat dibandingkan dengan periode yang sama di 2021,” terang Head of Category Development Tokopedia, Ramadhan Niendraputra.Ia menambahkan, “Di kuartal III 2022, produk seperti Makanan &amp; Susu Bayi, Popok, Perlengkapan Mandi Bayi Perawatan Bayi, dan Perlengkapan Makan Bayi merupakan beberapa produk yang paling banyak diburu pada sub kategori Ibu dan Anak. Sementara di sub kategori Fesyen Anak, Tas Ransel Anak, Kaos Anak Laki-Laki, Sneakers Anak Laki-Laki, Setelan Anak Laki-Laki, dan Dress Anak Perempuan menjadi yang paling laris di kuartal III ini.”Jumlah pembeli untuk kategori ini pun semakin meningkat. Tokopedia mencatat ada kenaikan sekitar 1,5x lipat pada Semester I 2022 dibandingkan dengan Semester I 2021. Di sisi lain, Kota Medan, Palembang, Bandung, Semarang, Surabaya, dan Kabupaten Sidoarjo menjadi Kota/Kabupaten dengan transaksi tertinggi di kategori Ibu dan Anak Tokopedia.Tren ini turut didorong oleh sederet inisiatif dari Tokopedia untuk memenuhi kebutuhan orang tua akan produk yang berkaitan dengan anak. Seperti Tokopedia Parents, sebuah ekosistem khusus di Tokopedia untuk mempermudah masyarakat, terutama komunitas orang tua, mendapatkan produk kebutuhan serta informasi relevan berkaitan dengan anak, keluarga dan rumah tangga.“Data internal kami mencatat bahwa jumlah penjual yang ikut dalam Tokopedia Parents pun naik lebih dari 3x lipat pada kuartal III 2022 dibandingkan kuartal III 2021,” terang Ramadhan.Berangkat dari kesulitannya dalam mencari pakaian bayi yang nyaman dan multifungsi dengan harga terjangkau, Febrina Oktaviani, akhirnya mendirikan Kalale. “Setiap produk yang kami buat, tidak hanya nyaman dan praktis bagi anak, tapi juga memiliki cerita sendiri. Inilah yang membedakan produk kami dengan yang lainnya,” jelasnya.', 'asyari', 'news-6.jpg', '2022-12-04');
 
 -- --------------------------------------------------------
 
@@ -185,9 +230,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id_user`, `username`, `email`, `password`) VALUES
 (1, 'admin', 'admin@gmail.com', '21232f297a57a5a743894a0e4a801fc3'),
-(2, 'asyari', 'asyari@gmail.com', '5180e6fd91b7013f4f8acf677b5f1c2b'),
-(3, 'tes', 'tes@gmail.com', '28b662d883b6d76fd96e4ddc5e9ba780'),
-(4, 'user', 'user@gmail.com', 'ee11cbb19052e40b07aac0ca060c23ee');
+(7, 'asyari', 'asyari@gmail.com', '5180e6fd91b7013f4f8acf677b5f1c2b');
 
 --
 -- Indexes for dumped tables
@@ -224,6 +267,18 @@ ALTER TABLE `home_sec_two`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `kontak`
+--
+ALTER TABLE `kontak`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `lokasi`
+--
+ALTER TABLE `lokasi`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `newsroom`
 --
 ALTER TABLE `newsroom`
@@ -243,43 +298,55 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `about`
 --
 ALTER TABLE `about`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `bisnis`
 --
 ALTER TABLE `bisnis`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `gabung`
 --
 ALTER TABLE `gabung`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `home_sec_one`
 --
 ALTER TABLE `home_sec_one`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `home_sec_two`
 --
 ALTER TABLE `home_sec_two`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `kontak`
+--
+ALTER TABLE `kontak`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `lokasi`
+--
+ALTER TABLE `lokasi`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `newsroom`
 --
 ALTER TABLE `newsroom`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

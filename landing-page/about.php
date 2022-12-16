@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About | Tokopedia</title>
   <link rel="stylesheet" href="../dist/style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" type="image/x-icon" href="../src/img/logo.png" />
   <link rel="stylesheet" href="../vendor/aos/aos.css" />
 </head>

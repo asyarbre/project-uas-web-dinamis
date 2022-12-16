@@ -1,6 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./*.{html,js}"],
+  content: [
+    "./auth/*.php",
+    "./landing-page/**/*.php",
+    "./components/*.{html,js,php}",
+    "./dashboard/*/**/.{html,js,php}",
+    "./landing-page/gabung.php",
+    "./components/landing-nav.php"
+  ],
   theme: {
     extend: {
       colors: {

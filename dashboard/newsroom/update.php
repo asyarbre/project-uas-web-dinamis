@@ -177,7 +177,7 @@ $username = $_SESSION["username"];
           $sql = "update newsroom set
           title='$title',
           isi='$isi',
-          gambar='$gambar',
+          gambar='$gambar'
           where id=$id;";
 
           //Mengeksekusi atau menjalankan query diatas
